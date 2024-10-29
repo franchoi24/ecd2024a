@@ -12,26 +12,34 @@
             padding: 0;
         }
         .container {
-            width: 100%; /* Allow the container to use the full width */
+            width: 100%;
+            max-width: 900px; /* Set a maximum width for better layout */
             margin: auto;
             padding: 20px;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px; /* Rounded corners */
         }
         .header {
             background-color: #4CAF50;
             color: #fff;
             padding: 15px;
             text-align: center;
+            border-radius: 8px 8px 0 0; /* Rounded top corners */
         }
         .content {
             padding: 20px;
         }
         .graph {
             width: 100%;
-            height: 600px;
+            height: 600px; /* Set fixed height */
             margin-bottom: 20px;
             background-color: #eaeaea; /* Light grey background for better visibility */
+            overflow: hidden; /* Prevent overflow */
+        }
+        .tableauPlaceholder {
+            width: 100%; /* Ensure the Tableau placeholder uses full width */
+            height: 100%; /* Ensure the Tableau placeholder uses full height */
         }
     </style>
 </head>
@@ -43,41 +51,19 @@
         </div>
         <div class="content">
             <div class="graph">
-                <!-- Replace with your first Tableau embed code -->
                 <div class='tableauPlaceholder' id='viz1730159825161' style='position: relative'>
                     <noscript>
                         <a href='#'>
-                            <img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;lo&#47;losdelfondoBook&#47;PorcentajedeAumentoGNC&#47;1_rss.png' style='border: none' />
+                            <img alt=' ' src='https://public.tableau.com/static/images/lo/losdelfondoBook/PorcentajedeAumentoGNC/1_rss.png' style='border: none' />
                         </a>
                     </noscript>
                     <object class='tableauViz' style='display:none;'>
                         <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
                         <param name='embed_code_version' value='3' /> 
                         <param name='site_root' value='' />
-                        <param name='name' value='losdelfondoBook&#47;PorcentajedeAumentoGNC' />
+                        <param name='name' value='losdelfondoBook/PorcentajedeAumentoGNC' />
                         <param name='tabs' value='yes' />
                         <param name='toolbar' value='yes' />
-                        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;lo&#47;losdelfondoBook&#47;PorcentajedeAumentoGNC&#47;1.png' />
+                        <param name='static_image' value='https://public.tableau.com/static/images/lo/losdelfondoBook/PorcentajedeAumentoGNC/1.png' />
                         <param name='animate_transition' value='yes' />
-                        <param name='display_static_image' value='yes' />
-                        <param name='display_spinner' value='yes' />
-                        <param name='display_overlay' value='yes' />
-                        <param name='display_count' value='yes' />
-                        <param name='language' value='en-US' />
-                    </object>
-                </div>
-                <script type='text/javascript'>
-                    var divElement = document.getElementById('viz1730159825161');
-                    var vizElement = divElement.getElementsByTagName('object')[0];
-                    vizElement.style.width='100%';
-                    vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
-                    var scriptElement = document.createElement('script');
-                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-                    vizElement.parentNode.insertBefore(scriptElement, vizElement);
-                </script>
-            </div>
-            <!-- Add more graphs as needed -->
-        </div>
-    </div>
-</body>
-</html>
+                        <param name='display_st
