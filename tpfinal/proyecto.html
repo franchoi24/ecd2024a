@@ -65,105 +65,105 @@
             <p>
                 La base de datos cuenta con 4633 bocas de expendio, siendo 1859 de GNC, 4171 de Nafta Súper, 4057 de Nafta Premium, 4187 de Gasoil Grado 2 y 4079 de Gasoil Grado 3. La discrepancia en la suma de las bocas para los distintos combustibles se debe a que no todas las empresas comercializan todos los productos.
             </p>
-            <div class="graph">
-                <img src="https://franchoi24.github.io/ecd2024a/tpfinal/EDA.jpg" alt="Análisis Exploratorio de Datos" style="width: 100%; height: auto; margin-top: 10px; margin-bottom: 20px; border-radius: 8px;">
+            <div class="graph" style="overflow: hidden; margin-top: 20px;">
+                <img src="https://franchoi24.github.io/ecd2024a/tpfinal/EDA.jpg" alt="Análisis Exploratorio de Datos" style="display: block; max-width: 100%; height: auto; margin: 0 auto; border-radius: 8px;">
             </div>
 
-<h3>Diccionario de datos</h3>
-<table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
-    <thead style="background-color: #4CAF50; color: white;">
-        <tr>
-            <th style="padding: 10px; text-align: left;">Nombre</th>
-            <th style="padding: 10px; text-align: left;">Descripción</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td style="padding: 10px; border: 1px solid #ddd;">indice_tiempo</td>
-            <td style="padding: 10px; border: 1px solid #ddd;">Fecha en aaaa-mm de la toma de datos</td>
-        </tr>
-        <tr>
-            <td style="padding: 10px; border: 1px solid #ddd;">idempresa</td>
-            <td style="padding: 10px; border: 1px solid #ddd;">Número de identificación de la empresa</td>
-        </tr>
-        <tr>
-            <td style="padding: 10px; border: 1px solid #ddd;">cuit</td>
-            <td style="padding: 10px; border: 1px solid #ddd;">CUIT de la empresa</td>
-        </tr>
-        <tr>
-            <td style="padding: 10px; border: 1px solid #ddd;">empresa</td>
-            <td style="padding: 10px; border: 1px solid #ddd;">Nombre de la empresa</td>
-        </tr>
-        <tr>
-            <td style="padding: 10px; border: 1px solid #ddd;">direccion</td>
-            <td style="padding: 10px; border: 1px solid #ddd;">Dirección de la empresa</td>
-        </tr>
-        <tr>
-            <td style="padding: 10px; border: 1px solid #ddd;">localidad</td>
-            <td style="padding: 10px; border: 1px solid #ddd;">Localidad de operación comercial de la empresa</td>
-        </tr>
-        <tr>
-            <td style="padding: 10px; border: 1px solid #ddd;">provincia</td>
-            <td style="padding: 10px; border: 1px solid #ddd;">Provincia donde radica la empresa</td>
-        </tr>
-        <tr>
-            <td style="padding: 10px; border: 1px solid #ddd;">region</td>
-            <td style="padding: 10px; border: 1px solid #ddd;">Región donde opera la empresa. Reúne más de una provincia.</td>
-        </tr>
-        <tr>
-            <td style="padding: 10px; border: 1px solid #ddd;">idproducto</td>
-            <td style="padding: 10px; border: 1px solid #ddd;">Número identificatorio del producto.</td>
-        </tr>
-        <tr>
-            <td style="padding: 10px; border: 1px solid #ddd;">producto</td>
-            <td style="padding: 10px; border: 1px solid #ddd;">Nombre del producto (Nafta Súper, Nafta Premium, Gas Oil Grado 2, Gas Oil Grado 3, GNC)</td>
-        </tr>
-        <tr>
-            <td style="padding: 10px; border: 1px solid #ddd;">idtipohorario</td>
-            <td style="padding: 10px; border: 1px solid #ddd;">Número de identificación del horario, relacionado a la variable tipohorario</td>
-        </tr>
-        <tr>
-            <td style="padding: 10px; border: 1px solid #ddd;">tipohorario</td>
-            <td style="padding: 10px; border: 1px solid #ddd;">Horario de toma de datos (Diurno, Nocturno)</td>
-        </tr>
-        <tr>
-            <td style="padding: 10px; border: 1px solid #ddd;">precio</td>
-            <td style="padding: 10px; border: 1px solid #ddd;">Precio del combustible en Pesos Argentinos ($)</td>
-        </tr>
-        <tr>
-            <td style="padding: 10px; border: 1px solid #ddd;">fecha_vigencia</td>
-            <td style="padding: 10px; border: 1px solid #ddd;">Fecha de la toma del dato en formato dd/mm/aa hh:mm</td>
-        </tr>
-        <tr>
-            <td style="padding: 10px; border: 1px solid #ddd;">idempresabandera</td>
-            <td style="padding: 10px; border: 1px solid #ddd;">Número de identificación de la empresa de bandera.</td>
-        </tr>
-        <tr>
-            <td style="padding: 10px; border: 1px solid #ddd;">empresabandera</td>
-            <td style="padding: 10px; border: 1px solid #ddd;">Nombre de la empresa de bandera</td>
-        </tr>
-        <tr>
-            <td style="padding: 10px; border: 1px solid #ddd;">latitud/longitud</td>
-            <td style="padding: 10px; border: 1px solid #ddd;">Latitud y longitud de la ubicación de la boca de expendio</td>
-        </tr>
-        <tr>
-            <td style="padding: 10px; border: 1px solid #ddd;">geojson</td>
-            <td style="padding: 10px; border: 1px solid #ddd;">Referencia de ubicación geográfica en formato GeoJSON</td>
-        </tr>
-    </tbody>
-</table>
-
-
-<h3 style="color: #4CAF50;">Preguntas</h3>
-<div class="questions" style="background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 8px; padding: 20px; margin-top: 10px;">
-    <ol style="margin: 0; padding-left: 20px; line-height: 1.6;">
-        <li style="margin-bottom: 10px;">¿En qué provincias se consigue el combustible más barato del país? ¿En cuáles es más caro?</li>
-        <li style="margin-bottom: 10px;">¿Qué combustible es más económico?</li>
-        <li style="margin-bottom: 10px;">¿Cuáles son las empresas que ofrecen los combustibles más baratos? ¿Son las mismas empresas para todos los combustibles?</li>
-        <li style="margin-bottom: 10px;">¿Hubo variaciones de precios significativas de los combustibles en la última década?</li>
-        <li>¿En qué año y trimestre se registraron los mayores aumentos porcentuales en la tarifa de los combustibles? ¿Es igual para el GNC, la nafta o el gasoil?</li>
-    </ol>
-</div>
+            <h3>Diccionario de datos</h3>
+            <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+                <thead style="background-color: #4CAF50; color: white;">
+                    <tr>
+                        <th style="padding: 10px; text-align: left;">Nombre</th>
+                        <th style="padding: 10px; text-align: left;">Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ddd;">indice_tiempo</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Fecha en aaaa-mm de la toma de datos</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ddd;">idempresa</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Número de identificación de la empresa</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ddd;">cuit</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">CUIT de la empresa</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ddd;">empresa</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Nombre de la empresa</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ddd;">direccion</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Dirección de la empresa</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ddd;">localidad</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Localidad de operación comercial de la empresa</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ddd;">provincia</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Provincia donde radica la empresa</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ddd;">region</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Región donde opera la empresa. Reúne más de una provincia.</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ddd;">idproducto</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Número identificatorio del producto.</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ddd;">producto</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Nombre del producto (Nafta Súper, Nafta Premium, Gas Oil Grado 2, Gas Oil Grado 3, GNC)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ddd;">idtipohorario</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Número de identificación del horario, relacionado a la variable tipohorario</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ddd;">tipohorario</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Horario de toma de datos (Diurno, Nocturno)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ddd;">precio</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Precio del combustible en Pesos Argentinos ($)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ddd;">fecha_vigencia</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Fecha de la toma del dato en formato dd/mm/aa hh:mm</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ddd;">idempresabandera</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Número de identificación de la empresa de bandera.</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ddd;">empresabandera</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Nombre de la empresa de bandera</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ddd;">latitud/longitud</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Latitud y longitud de la ubicación de la boca de expendio</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ddd;">geojson</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Referencia de ubicación geográfica en formato GeoJSON</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            
+            <h3 style="color: #4CAF50;">Preguntas</h3>
+            <div class="questions" style="background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 8px; padding: 20px; margin-top: 10px;">
+                <ol style="margin: 0; padding-left: 20px; line-height: 1.6;">
+                    <li style="margin-bottom: 10px;">¿En qué provincias se consigue el combustible más barato del país? ¿En cuáles es más caro?</li>
+                    <li style="margin-bottom: 10px;">¿Qué combustible es más económico?</li>
+                    <li style="margin-bottom: 10px;">¿Cuáles son las empresas que ofrecen los combustibles más baratos? ¿Son las mismas empresas para todos los combustibles?</li>
+                    <li style="margin-bottom: 10px;">¿Hubo variaciones de precios significativas de los combustibles en la última década?</li>
+                    <li>¿En qué año y trimestre se registraron los mayores aumentos porcentuales en la tarifa de los combustibles? ¿Es igual para el GNC, la nafta o el gasoil?</li>
+                </ol>
+            </div>
         <div class="content">
             <div class="graph">
                 <div class='tableauPlaceholder' id='viz1730159825161' style='position: relative'>
