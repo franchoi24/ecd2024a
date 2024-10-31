@@ -69,85 +69,90 @@
                 <p>Aquí agregar gráfico de outliers o algo de eso.</p>
             </div>
 
-            <h3>Diccionario de datos</h3>
-            <table>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Descripción</th>
-                </tr>
-                <tr>
-                    <td>indice_tiempo</td>
-                    <td>Fecha en aaaa-mm de la toma de datos</td>
-                </tr>
-                <tr>
-                    <td>idempresa</td>
-                    <td>Número de identificación de la empresa</td>
-                </tr>
-                <tr>
-                    <td>cuit</td>
-                    <td>CUIT de la empresa</td>
-                </tr>
-                <tr>
-                    <td>empresa</td>
-                    <td>Nombre de la empresa</td>
-                </tr>
-                <tr>
-                    <td>direccion</td>
-                    <td>Dirección de la empresa</td>
-                </tr>
-                <tr>
-                    <td>localidad</td>
-                    <td>Localidad de operación comercial de la empresa</td>
-                </tr>
-                <tr>
-                    <td>provincia</td>
-                    <td>Provincia donde radica la empresa</td>
-                </tr>
-                <tr>
-                    <td>region</td>
-                    <td>Región donde opera la empresa. Reúne más de una provincia.</td>
-                </tr>
-                <tr>
-                    <td>idproducto</td>
-                    <td>Número identificatorio del producto.</td>
-                </tr>
-                <tr>
-                    <td>producto</td>
-                    <td>Nombre del producto (Nafta Súper, Nafta Premium, Gas Oil Grado 2, Gas Oil Grado 3, GNC)</td>
-                </tr>
-                <tr>
-                    <td>idtipohorario</td>
-                    <td>Número de identificación del horario, relacionado a la variable tipohorario</td>
-                </tr>
-                <tr>
-                    <td>tipohorario</td>
-                    <td>Horario de toma de datos (Diurno, Nocturno)</td>
-                </tr>
-                <tr>
-                    <td>precio</td>
-                    <td>Precio del combustible en Pesos Argentinos ($)</td>
-                </tr>
-                <tr>
-                    <td>fecha_vigencia</td>
-                    <td>Fecha de la toma del dato en formato dd/mm/aa hh:mm</td>
-                </tr>
-                <tr>
-                    <td>idempresabandera</td>
-                    <td>Número de identificación de la empresa de bandera.</td>
-                </tr>
-                <tr>
-                    <td>empresabandera</td>
-                    <td>Nombre de la empresa de bandera</td>
-                </tr>
-                <tr>
-                    <td>latitud/longitud</td>
-                    <td>Latitud y longitud de la ubicación de la boca de expendio</td>
-                </tr>
-                <tr>
-                    <td>geojson</td>
-                    <td>Referencia de ubicación geográfica en formato GeoJSON</td>
-                </tr>
-            </table>
+<h3>Diccionario de datos</h3>
+<table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+    <thead style="background-color: #4CAF50; color: white;">
+        <tr>
+            <th style="padding: 10px; text-align: left;">Nombre</th>
+            <th style="padding: 10px; text-align: left;">Descripción</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;">indice_tiempo</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Fecha en aaaa-mm de la toma de datos</td>
+        </tr>
+        <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;">idempresa</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Número de identificación de la empresa</td>
+        </tr>
+        <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;">cuit</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">CUIT de la empresa</td>
+        </tr>
+        <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;">empresa</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Nombre de la empresa</td>
+        </tr>
+        <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;">direccion</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Dirección de la empresa</td>
+        </tr>
+        <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;">localidad</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Localidad de operación comercial de la empresa</td>
+        </tr>
+        <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;">provincia</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Provincia donde radica la empresa</td>
+        </tr>
+        <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;">region</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Región donde opera la empresa. Reúne más de una provincia.</td>
+        </tr>
+        <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;">idproducto</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Número identificatorio del producto.</td>
+        </tr>
+        <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;">producto</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Nombre del producto (Nafta Súper, Nafta Premium, Gas Oil Grado 2, Gas Oil Grado 3, GNC)</td>
+        </tr>
+        <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;">idtipohorario</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Número de identificación del horario, relacionado a la variable tipohorario</td>
+        </tr>
+        <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;">tipohorario</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Horario de toma de datos (Diurno, Nocturno)</td>
+        </tr>
+        <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;">precio</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Precio del combustible en Pesos Argentinos ($)</td>
+        </tr>
+        <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;">fecha_vigencia</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Fecha de la toma del dato en formato dd/mm/aa hh:mm</td>
+        </tr>
+        <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;">idempresabandera</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Número de identificación de la empresa de bandera.</td>
+        </tr>
+        <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;">empresabandera</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Nombre de la empresa de bandera</td>
+        </tr>
+        <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;">latitud/longitud</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Latitud y longitud de la ubicación de la boca de expendio</td>
+        </tr>
+        <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;">geojson</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Referencia de ubicación geográfica en formato GeoJSON</td>
+        </tr>
+    </tbody>
+</table>
+
 
             <h3>Preguntas</h3>
             <div class="questions">
