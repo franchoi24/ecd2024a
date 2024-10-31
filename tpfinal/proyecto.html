@@ -48,6 +48,13 @@
         .questions {
             margin-top: 20px;
         }
+        .centered-graph {
+            display: flex;                /* Use flexbox for centering */
+            justify-content: center;      /* Center horizontally */
+            align-items: center;          /* Center vertically (if needed) */
+            margin-top: 20px;            /* Margin on top */
+            overflow: hidden;             /* Prevent overflow */
+        }
     </style>
 </head>
 <body>
@@ -66,7 +73,7 @@
             La base de datos cuenta con 4633 bocas de expendio, siendo 1859 de GNC, 4171 de Nafta Súper, 4057 de Nafta Premium, 4187 de Gasoil Grado 2 y 4079 de Gasoil Grado 3. La discrepancia en la suma de las bocas para los distintos combustibles se debe a que no todas las empresas comercializan todos los productos.
         </p>
         
-        <div class="graph" style="overflow: hidden; margin-top: 20px;">
+        <div class="centered-graph">
             <img src="https://franchoi24.github.io/ecd2024a/tpfinal/EDA.jpg" alt="Análisis Exploratorio de Datos" style="display: block; max-width: 100%; height: auto; margin: 0 auto; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
         </div>
 
