@@ -41,6 +41,13 @@
             width: 100%; /* Ensure the Tableau placeholder uses full width */
             height: 100%; /* Ensure the Tableau placeholder uses full height */
         }
+        h3 {
+            margin-top: 20px;
+            color: #333;
+        }
+        .questions {
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -49,6 +56,109 @@
             <h1>Grupo: Los del fondo</h1>
             <h2>Temática: Precio de nafta, gasoil y GNC</h2>
         </div>
+        <h3>Introducción</h3>
+            <p>
+                En este trabajo presentamos el análisis de los precios históricos y vigentes de combustibles fósiles en Argentina. En el país, el precio de comercialización minorista de los combustibles debe ser informado por los titulares de las bocas de expendio siendo de acceso libre para los consumidores. Los precios vigentes en surtidores y los precios históricos están disponibles en la página web de la Secretaría de Energía.
+            </p>
+
+            <h3>Análisis exploratorio de datos</h3>
+            <p>
+                La base de datos cuenta con 4633 bocas de expendio, siendo 1859 de GNC, 4171 de Nafta Súper, 4057 de Nafta Premium, 4187 de Gasoil Grado 2 y 4079 de Gasoil Grado 3. La discrepancia en la suma de las bocas para los distintos combustibles se debe a que no todas las empresas comercializan todos los productos.
+            </p>
+            <div class="graph">
+                <p>Aquí agregar gráfico de outliers o algo de eso.</p>
+            </div>
+
+            <h3>Diccionario de datos</h3>
+            <table>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                </tr>
+                <tr>
+                    <td>indice_tiempo</td>
+                    <td>Fecha en aaaa-mm de la toma de datos</td>
+                </tr>
+                <tr>
+                    <td>idempresa</td>
+                    <td>Número de identificación de la empresa</td>
+                </tr>
+                <tr>
+                    <td>cuit</td>
+                    <td>CUIT de la empresa</td>
+                </tr>
+                <tr>
+                    <td>empresa</td>
+                    <td>Nombre de la empresa</td>
+                </tr>
+                <tr>
+                    <td>direccion</td>
+                    <td>Dirección de la empresa</td>
+                </tr>
+                <tr>
+                    <td>localidad</td>
+                    <td>Localidad de operación comercial de la empresa</td>
+                </tr>
+                <tr>
+                    <td>provincia</td>
+                    <td>Provincia donde radica la empresa</td>
+                </tr>
+                <tr>
+                    <td>region</td>
+                    <td>Región donde opera la empresa. Reúne más de una provincia.</td>
+                </tr>
+                <tr>
+                    <td>idproducto</td>
+                    <td>Número identificatorio del producto.</td>
+                </tr>
+                <tr>
+                    <td>producto</td>
+                    <td>Nombre del producto (Nafta Súper, Nafta Premium, Gas Oil Grado 2, Gas Oil Grado 3, GNC)</td>
+                </tr>
+                <tr>
+                    <td>idtipohorario</td>
+                    <td>Número de identificación del horario, relacionado a la variable tipohorario</td>
+                </tr>
+                <tr>
+                    <td>tipohorario</td>
+                    <td>Horario de toma de datos (Diurno, Nocturno)</td>
+                </tr>
+                <tr>
+                    <td>precio</td>
+                    <td>Precio del combustible en Pesos Argentinos ($)</td>
+                </tr>
+                <tr>
+                    <td>fecha_vigencia</td>
+                    <td>Fecha de la toma del dato en formato dd/mm/aa hh:mm</td>
+                </tr>
+                <tr>
+                    <td>idempresabandera</td>
+                    <td>Número de identificación de la empresa de bandera.</td>
+                </tr>
+                <tr>
+                    <td>empresabandera</td>
+                    <td>Nombre de la empresa de bandera</td>
+                </tr>
+                <tr>
+                    <td>latitud/longitud</td>
+                    <td>Latitud y longitud de la ubicación de la boca de expendio</td>
+                </tr>
+                <tr>
+                    <td>geojson</td>
+                    <td>Referencia de ubicación geográfica en formato GeoJSON</td>
+                </tr>
+            </table>
+
+            <h3>Preguntas</h3>
+            <div class="questions">
+                <ol>
+                    <li>¿En qué provincias se consigue el combustible más barato del país? ¿En cuáles es más caro?</li>
+                    <li>¿Qué combustible es más económico?</li>
+                    <li>¿Cuáles son las empresas que ofrecen los combustibles más baratos? ¿Son las mismas empresas para todos los combustibles?</li>
+                    <li>¿Hubo variaciones de precios significativas de los combustibles en la última década?</li>
+                    <li>¿En qué año y trimestre se registraron los mayores aumentos porcentuales en la tarifa de los combustibles? ¿Es igual para el GNC, la nafta o el gasoil?</li>
+                </ol>
+            </div>
         <div class="content">
             <div class="graph">
                 <div class='tableauPlaceholder' id='viz1730159825161' style='position: relative'>
@@ -83,6 +193,16 @@
                     vizElement.parentNode.insertBefore(scriptElement, vizElement);
                 </script>
             </div>
+            <h3>Conclusiones</h3>
+            <p>
+                Los resultados del precio por provincias evidencian una clara zonificación entre las provincias del sur o patagónicas y el resto del país en relación a la Nafta Súper y Premium. Tierra del Fuego tiene los precios más bajos para estos combustibles mientras que Formosa y Misiones presentan los precios más altos. A nivel nacional, la Nafta Súper es el combustible más caro y el GNC el más económico.
+            </p>
+            <p>
+                Shell es la empresa que comercializa los combustibles más caros a nivel país, tanto para Nafta Súper y Premium, y la segunda más cara para el GNC. Por el contrario, las empresas de bandera con los menores precios para las naftas son YPF y GULF, mientras que las de bandera blanca comercializan el GNC al menor precio de mercado.
+            </p>
+            <p>
+                A lo largo de la última década el precio de los combustibles ha ido en aumento. Sin embargo, para el GNC se observa una reducción de sus precios en lo que va del último trimestre de 2024 luego del pico registrado en el tercer trimestre del mismo año. Para la Nafta Súper y Premium no se observa tal reducción pero sí una desaceleración en la subida de los precios. El mayor incremento porcentual entre trimestres consecutivos se observó entre el final del año 2023 y el inicio del 2024 para las naftas y el GNC, coincidiendo con el cambio de gobierno en Argentina.
+            </p>
             <!-- Add more graphs as needed -->
         </div>
     </div>
